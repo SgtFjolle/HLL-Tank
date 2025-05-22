@@ -1,8 +1,6 @@
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   background-color: #1e1e1e;
   color: #fff5d8;
 }
@@ -19,12 +17,23 @@ body {
   align-items: center;
 }
 
-.section {
-  margin-bottom: 20px;
+.controls {
+  margin: 20px 0;
+}
+
+.faction-variation-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.faction-select, .variation-select {
+  flex-grow: 1;
 }
 
 #variation-buttons button {
-  margin: 5px;
+  margin: 5px 5px 0 0;
   padding: 10px 14px;
   background-color: #3a3a3a;
   border: 1px solid #666;
@@ -33,18 +42,22 @@ body {
   cursor: pointer;
 }
 
-#variation-buttons button:hover,
-#fullscreen-toggle:hover {
-  background-color: #505050;
-}
-
 #variation-buttons button.active {
   background-color: #777;
 }
 
+#fullscreen-toggle {
+  background-color: #3a3a3a;
+  border: 1px solid #666;
+  color: #fff5d8;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
 #image-container {
+  margin: 20px 0;
   text-align: center;
-  margin-top: 20px;
 }
 
 #army-image {
@@ -55,14 +68,27 @@ body {
   transition: transform 0.4s ease;
 }
 
-#fullscreen-toggle {
-  margin-top: 20px;
-  padding: 10px 14px;
-  background-color: #3a3a3a;
-  border: 1px solid #666;
+.map-selector, .banner-ad {
+  margin: 20px 0;
+}
+
+select {
+  background-color: #2a2a2a;
   color: #fff5d8;
+  border: 1px solid #666;
+  padding: 6px;
   border-radius: 4px;
-  cursor: pointer;
+}
+
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+body.light-mode select,
+body.light-mode button {
+  background-color: #fff;
+  color: #000;
 }
 
 .fullscreen-mode #army-image {
@@ -71,27 +97,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-
-  .header,
-  .unified-controls,
-  .main-content,
-  .variation-row {
+  .faction-variation-row {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .fullscreen-right {
-    align-self: center;
-    margin-top: 10px;
-  }
-
-  .map-selector,
-  .banner-ad,
-  #image-container {
-    margin-top: 20px;
   }
 
   #fullscreen-toggle {

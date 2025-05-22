@@ -6,72 +6,62 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container" id="main-container">
+  <div class="container">
     <div class="header">
       <h1>Tank Recognition Tool</h1>
-      <button id="mode-toggle" onclick="toggleMode()">🌙</button>
+      <button id="mode-toggle">🌙</button>
     </div>
 
-    <div class="section unified-controls">
-      <div class="faction-select-group">
-        <label for="category-select">Select Faction:</label>
-        <select id="category-select" onchange="updateVariations()">
-          <option value="german">AXIS - Germany</option>
-          <option value="us">ALLIES - United States</option>
-          <option value="soviet">ALLIES - Soviet Union</option>
-          <option value="british">ALLIES - Britain</option>
-        </select>
-      </div>
-      <div class="variation-row">
-        <div class="variation-select-group">
+    <div class="controls">
+      <div class="faction-variation-row">
+        <div class="faction-select">
+          <label for="category-select">Select Faction:</label>
+          <select id="category-select"></select>
+        </div>
+        <div class="variation-select">
           <label>Select Variation:</label>
           <div id="variation-buttons"></div>
         </div>
-        <div class="fullscreen-right">
-          <button id="fullscreen-toggle">Toggle Fullscreen</button>
-        </div>
+        <button id="fullscreen-toggle">Toggle Fullscreen</button>
       </div>
     </div>
 
-    <div class="main-content">
-      <div class="section map-selector">
-        <p>Don’t know which faction/variation to pick?</p>
-        <label for="map-select">Select map:</label>
-        <select id="map-select">
-          <option value="">— Choose a map —</option>
-          <option>Carentan</option>
-          <option>Driel</option>
-          <option>El Alamein</option>
-          <option>Elsenborn Ridge</option>
-          <option>Foy</option>
-          <option>Hill 400</option>
-          <option>Hürtgen Forest</option>
-          <option>Kharkov</option>
-          <option>Kursk</option>
-          <option>Mortain</option>
-          <option>Omaha Beach</option>
-          <option>Purple Heart Lane</option>
-          <option>Remagen</option>
-          <option>Sainte-Marie-du-Mont</option>
-          <option>Sainte-Mère-Église</option>
-          <option>Stalingrad</option>
-          <option>Tobruk</option>
-          <option>Utah Beach</option>
-        </select>
-        <div id="map-result" class="map-result"></div>
-      </div>
-
-      <div class="section banner-ad">
-        <a href="https://buymeacoffee.com/sgtfjolle" target="_blank">
-          <img src="banner.ad.jpg" alt="Banner Advertisement" id="banner-image">
-        </a>
-      </div>
-
-      <div id="image-container">
-        <img id="army-image" src="" alt="Army Display" />
-      </div>
+    <div id="image-container">
+      <img id="army-image" src="" alt="Army Display" />
     </div>
 
+    <div class="map-selector">
+      <p>Don’t know which faction/variation to pick?</p>
+      <label for="map-select">Select map:</label>
+      <select id="map-select">
+        <option value="">— Choose a map —</option>
+        <option>Carentan</option>
+        <option>Driel</option>
+        <option>El Alamein</option>
+        <option>Elsenborn Ridge</option>
+        <option>Foy</option>
+        <option>Hill 400</option>
+        <option>Hürtgen Forest</option>
+        <option>Kharkov</option>
+        <option>Kursk</option>
+        <option>Mortain</option>
+        <option>Omaha Beach</option>
+        <option>Purple Heart Lane</option>
+        <option>Remagen</option>
+        <option>Sainte-Marie-du-Mont</option>
+        <option>Sainte-Mère-Église</option>
+        <option>Stalingrad</option>
+        <option>Tobruk</option>
+        <option>Utah Beach</option>
+      </select>
+      <div id="map-result" class="map-result"></div>
+    </div>
+
+    <div class="banner-ad">
+      <a href="https://buymeacoffee.com/sgtfjolle" target="_blank">
+        <img src="banner.ad.jpg" alt="Banner Advertisement" id="banner-image">
+      </a>
+    </div>
   </div>
 
   <script src="script.js"></script>
